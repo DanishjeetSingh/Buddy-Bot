@@ -22,7 +22,7 @@ const discord = require("discord.js");
 
 const client = new discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES"] });
 
-client.login("OTA1NjEzMTM5MDc5NDcxMTE0.YYMn9Q.VFIBcINKo48nbggacD2mxIOoCoQ");
+client.login("OTA1NjEzMTM5MDc5NDcxMTE0.YYMn9Q.0OESeDvz_tl96h4EEAdaY-rCnZY");
 
 client.on('ready', () => {
     console.log("This bot is working");
