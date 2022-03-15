@@ -2,6 +2,11 @@
 // ----------- ALL THE GENERAL INFORMATION REGARDING THIS DISCORD BOT 👇 -------------
 // https://locrian-newsstand-826.notion.site/Buddy-Bot-e8d3eb337da541f3b8d2041a08554f38
 
+require('dotenv').config();
+
+const TOKEN = process.env.BOT_TOKEN;
+const DBCRED = process.env.DATABASE_CREDENTIALS;
+
 // --------------------------------------------------------------------------------------------
 // ----------------- Random number generator for "/random" ------------------------
 // --------------------------------------------------------------------------------------------
@@ -22,7 +27,7 @@ const discord = require("discord.js");
 
 const client = new discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES"] });
 
-client.login("OTA1NjEzMTM5MDc5NDcxMTE0.YYMn9Q.0OESeDvz_tl96h4EEAdaY-rCnZY");
+client.login(TOKEN);
 
 client.on('ready', () => {
     console.log("This bot is working");
@@ -39,7 +44,7 @@ client.on('ready', () => {
 
 const { Sequelize, DataTypes } = require("sequelize/dist")
 
-const sequelize = new Sequelize('postgres://postgres:Rocketman@09@localhost:5433/postgres')
+const sequelize = new Sequelize(DBCRED)
 
 try{
     (async() =>{
